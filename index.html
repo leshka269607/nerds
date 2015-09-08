@@ -7,26 +7,18 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<header class="main-header">
-			<div class="container clearfix">
+		<header class="main-header layout-center">
+			<div class="header-line1 clearfix">
 				<div class="logo">
-					<a href="#"><img src="img/logo.png"></a>
+					<a href="#"><img src="img/logo.png" width="139" height="56" alt= "Логотип Nerd's"></a>
 				</div>
 				
 				<nav class="main-navigation">
 					<ul>
-						<li>
-							<a href="#">Студия</a>
-						</li>
-						<li>
-							<a href="#">Клиенты</a>
-						</li>
-						<li>
-							<a href="#">Магазин</a>
-						</li>
-						<li>
-							<a href="#">Контакты</a>
-						</li>
+						<li><a href="#">Студия</a></li>
+						<li><a href="#">Клиенты</a></li>
+						<li><a href="#">Магазин</a></li>
+						<li><a href="#">Контакты</a></li>
 					</ul>
 				</nav>
 				
@@ -35,27 +27,27 @@
 				</div>
 			</div>
 			
-			<div class="slider1">
+			<div class="header-line2 clearfix">
 				<div class="slogan">
-					<h1>Долго, дорого, скрупулезно.</h1>
-					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+					<h1>Долго, дорого,<br> скрупулезно.</h1>
+					<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
 					<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
 				</div>
 				
 				<div class="slider-indicator">
-					<input class="active-indicator">
-					<input type="radio">
-					<input type="radio">
+					<label><input class="active-indicator" type="radio" name="slide" checked/></label>
+					<label><input type="radio" name="slide"/></label>
+					<label><input type="radio" name="slide"/></label>
 				</div>
 				
 				<div class="carousel">
-					<img src="#" alt="">
+					<img src="img\sidebar1.png" alt="">
 				</div>
 			</div>
 		</header>
 
-		<div class="container">
-			<article class="services">
+		<main class="layout-center">
+			<article class="services clearfix">
 				<section class="websites"><!-- background-image img/websites.png -->
 					<h2>Веб-сайты</h2>
 					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
@@ -75,9 +67,14 @@
 				</section>
 			</article>
 			
-			<article class="description">
-				<section>
+			<article class="description clearfix">
+				<section class="colomn-left">
 					<h3>Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</h3>
+					<p>
+						Исповедуем принципы минимализма и чистоты. Ставим математический<br>
+						расчет выше креатива. Работаем не покладая рук, как роботы.
+					</p>
+					
 					<p>Выполняем заказы на разработку:</p>
 					<ul>
 						<li><img src="#" alt="">Веб-сайтов любой сложности</li>
@@ -86,10 +83,9 @@
 					</ul>
 				</section>
 				
-				<section>
-					<img src="#" alt="">
-					<img src="#" alt="">
-					<img src="#" alt="">
+				<section class="colomn-right">
+					<img src="img/logo.png" alt="">
+					<p>SINCE 2004</p>
 					
 					<p>КАК Мы работаем:</p>
 					<ul>
@@ -100,24 +96,16 @@
 				</section>
 			</article>
 			
-			<article class="divide">
-				<section>
-					<img src="img/glukhanko.png" alt="Glukhanko">
-				</section>
-				
-				<section>
-					<img src="img/htmlAcademy.png" alt="html academy">
-				</section>
-				
-				<section>
-					<img src="img/borodinski.png" alt="Borodinski">
-				</section>
+			<article class="logos">
+					<img src="img/glukhanko.png" width="199" height="37" alt="Glukhanko">
+					<img src="img/htmlAcademy.png" width="199" height="68" alt="html academy">
+					<img src="img/borodinski.png" width="209" height="86" alt="Borodinski">
 			</article>
-		</div>
+		</main>
 
 		<footer class="main-footer">
-			<div class="container clearfix">
-				<section class="map">
+			<section class="map">
+				<div class="layout-center clearfix">
 					<section class="footer-contacts">
 						<p>NЁRDS DESIGN STUDIO</p>
 						191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>						
@@ -125,20 +113,21 @@
 						<a class="btn" href="#">НАПИШИТЕ НАМ</a>
 					</section>
 					
-					<section class="pointer">
-						<img src="img/pointer.png" alt="Местоположения">
-					</section>
-				</section>
-				
+					<section class="pointer"></section>
+					
+					</div>
+			</section>
+		
+			<div class="layout-center clearfix">				
 				<div class="discount">
-					<section class="footer-social">
+					<section class="footer-social colomn-left">
 						<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
 						<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
 						<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
 						<!--<a href="#" class="social-btn ?">?</a>-->
 					</section>
 						
-					<section>
+					<section class="ads colomn-right">
 						<p>Давайте дружить, это выгодно!</p>
 						<p>Скидка 10% для друзей из социальных сетей.</p>
 					</section>

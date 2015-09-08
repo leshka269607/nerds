@@ -1,23 +1,369 @@
+/*  div, nav, section, article, header, footer, form, a {
+	outline: 1px solid red;
+} */
+
 body {
+	margin: 0;
+	padding: 0;
+	min-width: 900px;
+	
+	background-color: white;
+
 	font-size: 16px;
-	line-height: normal;
+	line-height: 22px;
+	
 	color: black;
+	
 	font-weight: normal;
-	font-family: Times New Roman;
+	font-family: Roboto Medium;
 }
 
+
 h1 {
-	font-size: 40px;
-	line-height: normal;
+	font-size: 36px;
+	line-height: 36px;
 	color: black;
 	font-weight: bold;
-	font-family: Times New Roman;
+	font-family: Myriad Pro Regular;
 }
 
 h2 {
 	font-size: 18px;
-	line-height: normal;
+	line-height: 30px;
 	color: black;
 	font-weight: bold;
-	font-family: Times New Roman;
+	font-family: Myriad Pro Regular;
 }
+
+h3 {
+	font-size: 36px;
+	line-height: 36px;
+	color: black;
+	font-weight: bold;
+	font-family: Myriad Pro Regular;
+}
+
+
+/************************************ Общие классы для создания сетки*/
+.layout-center {
+  width: 880px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/************************************ Шапка */
+.main-header  {
+	background-color: #eeeeee;
+	font-size: 16px;
+}
+
+.main-header a {
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: bold;
+	font-family: Myriad Pro Regular;
+}
+
+.main-header ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+}
+
+.logo {
+	float: left;
+	width: 139px;
+	height: 56px;
+	padding-top: 30px;
+}
+
+.main-navigation {
+  float: left;
+  margin: 50px 0 0 180px;
+}
+
+.main-navigation li{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-navigation a {
+  margin-right: 35px;
+}
+
+.basket  {
+  float:right;
+  margin: 50px 0 0 60px;
+}
+
+.basket a {
+  margin-right: 0px;
+}
+
+.header-line1 {
+	margin-bottom: 50px;
+}
+
+.slogan {
+	float: left;
+	width: 370px;
+	min-height: 225px;
+}
+
+.slogan .btn {
+	display: block;
+	
+	width: 240px;
+	height: 40px;
+}
+
+.slider-indicator {
+	float: left;
+	width: 75px;
+	margin-right: 70px;
+	margin-left: 20px;
+	margin-top: 200px;
+}
+
+.carousel {
+	float: right;
+	width: 340px;
+}
+
+.header-line2 {
+	margin-bottom: 80px;
+}
+
+
+/************************************ Контент */
+
+.websites, .apps, .presentations {
+	float: left;
+	width: 240px;
+	min-height: 300px;
+	margin-right: 80px;
+}
+
+.websites {
+	background-image: url('../img/websites.png');
+	background-repeat: no-repeat;
+}
+
+.apps {
+	background-image: url('../img/apps.png');
+	background-repeat: no-repeat;
+}
+
+.presentations {
+	background-image: url('../img/presentations.png');
+	background-repeat: no-repeat;
+	margin-right: 0;
+}
+
+.services h2 {
+	margin-top: 145px;
+}
+
+.services {
+	border-bottom: 2px solid #eee;
+	margin-bottom: 80px;
+}
+
+		/************************************ Основной контент */
+			/************************************ Левая колонка */
+.colomn-left {
+	float: left;
+}
+
+
+.description {
+	margin-bottom: 45px;
+	border-bottom: 2px solid #eeeeee;
+}
+
+.description .colomn-left {
+	width: 620px;
+	margin-bottom: 75px;
+}
+
+.description p {
+	font-size: 16px;
+	line-height: 22px;
+	font-family: Myriad Pro Regular;
+}
+
+.description ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+		/************************************ Основной контент */
+			/************************************ Правая колонка */
+.colomn-right {
+	float: right;
+}
+
+.description .colomn-riht {
+	width: 240px;
+}
+
+/************************************ Основной контент */
+
+.logos {
+    display: inline-block;
+    width: 880px;
+    margin-bottom: 90px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #eeeeee; 
+}
+
+.logos img {
+    margin-right: 130px;
+    vertical-align: middle;
+}
+.logos img:nth-child(3) {
+    margin-right: 0px;
+}
+
+
+/************************************ Подвал */
+	/************************************ Карта */
+.map {
+	background-image: url("../img/map.jpg");
+	width: 1200px;
+	height: 416px;
+	margin: 0 auto;
+}
+
+.footer-contacts {
+	float: left;
+	width: 240px;
+	height: 240px;
+	background-color: white;
+}
+
+.pointer {
+	float: right;
+	width: 230px;
+	height: 190px;
+	margin-top: 110px;
+	background-image: url("../img/pointer.png");
+	background-position: 30px;
+	background-repeat: no-repeat;
+}
+
+.footer-social {
+	float: left;
+	width: 240px;
+	margin-right: 80px;
+}
+
+.social-btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 60px;
+	height: 40px;
+	margin-right: 20px;
+}
+
+.social-btn-inst {
+	margin-right: 0;
+}
+
+.ads {
+	float: right;
+	width: 550px;
+}
+
+/*************************** Внутреняя страничка */
+
+.main-header h1 {
+	text-align: center;
+}
+
+
+.filter {
+	width: 250px;
+	min-height: 700px;
+}
+
+.filter ul {
+	list-style: none;
+}
+
+.catalog {
+	width: 570px;
+}
+
+.sort ul {
+	list-style: none;
+}
+
+.sort li {
+	display: inline-block;
+	min-height: 30px;
+}
+
+.shop {
+	display: inline-block;
+	vertical-align: top;
+	width: 240px;
+	min-height: 270px;
+	margin-right: 85px;
+	margin-bottom: 80px;
+}
+
+.shop:nth-child(2n) {
+	margin-right: 0px;
+}
+
+.shop ul {
+	list-style: none;
+}
+
+.shop li{
+	display: inline-block;
+}
+
+.sketch {
+	width: 240px;
+	height: 240px;
+}
+
+.page-nubmer ul {
+	list-style: none;
+}
+
+.page-nubmer li {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

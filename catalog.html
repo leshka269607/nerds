@@ -7,26 +7,18 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<header class="main-header">
-			<div class="container clearfix">
+		<header class="main-header layout-center">
+			<div class="header-line1 clearfix">
 				<div class="logo">
-					<a href="#"><img src="img/logo.png"></a>
+					<a href="#"><img src="img/logo.png" width="139" height="56" alt= "Логотип Nerd's"></a>
 				</div>
 				
 				<nav class="main-navigation">
 					<ul>
-						<li>
-							<a href="#">Студия</a>
-						</li>
-						<li>
-							<a href="#">Клиенты</a>
-						</li>
-						<li>
-							<a href="#">Магазин</a>
-						</li>
-						<li>
-							<a href="#">Контакты</a>
-						</li>
+						<li><a href="#">Студия</a></li>
+						<li><a href="#">Клиенты</a></li>
+						<li><a href="#">Магазин</a></li>
+						<li><a href="#">Контакты</a></li>
 					</ul>
 				</nav>
 				
@@ -35,10 +27,10 @@
 				</div>
 			</div>
 			
-			<h1>Добро пожаловать в магазин<br>готовых макетов</h1>
+			<h1 class="layout-center">Добро пожаловать в магазин<br>готовых макетов</h1>
 		</header>
 
-		<div class="container">
+		<main class="layout-center clearfix">
 			<div class="colomn-left">
 				<form class="filter" action="#" method="get">
 						<div class="price">
@@ -72,12 +64,13 @@
 							</ul>
 						</div>
 						
-						<p><input class="btn" type="submit">ПОКАЗАТЬ</p>
+						<p><input class="btn" type="submit" value="ПОКАЗАТЬ"></p>
 					</form>
 				</div>
 			</div>
 			
-			<div class="colomn-right">
+			<div class="colomn-right catalog">
+
 				<div class="sort">
 					<ul>
 						<li>СОРТИРОВАТЬ:</li>
@@ -88,7 +81,8 @@
 						<li><span>▲</span></li>
 					</ul>
 				</div>
-				
+			
+			<div>
 				<article class="shop">
 					<div class="browse">
 						<ul>
@@ -120,6 +114,8 @@
 						</div>
 					</div>
 				</article>
+				
+
 				
 				<article class="shop">
 					<div class="browse">
@@ -176,21 +172,21 @@
 						<img src="img/dovetail.jpg">
 					</div>
 				</article>
+			</div>
 				
-				<div class="page-nubmer">
+				<div class="page-nubmer clearfix">
 					<ul>
 						<li>1</li>
 						<li><a class="btn" href="#">2</a></li>
 						<li><a class="btn" href="#">3</a></li>
 						<li><a class="btn" href="#">СЛЕДУЮЩАЯ</a></li>
 					</ul>
-				</div>
 			</div>
-		</div>
+		</main>
 
 		<footer class="main-footer">
-			<div class="container clearfix">
-				<section class="map">
+			<section class="map">
+				<div class="layout-center clearfix">
 					<section class="footer-contacts">
 						<p>NЁRDS DESIGN STUDIO</p>
 						191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>						
@@ -198,20 +194,21 @@
 						<a class="btn" href="#">НАПИШИТЕ НАМ</a>
 					</section>
 					
-					<section class="pointer">
-						<img src="img/pointer.png" alt="Местоположения">
-					</section>
-				</section>
-				
+					<section class="pointer"></section>
+					
+					</div>
+			</section>
+		
+			<div class="layout-center clearfix">				
 				<div class="discount">
-					<section class="footer-social">
+					<section class="footer-social colomn-left">
 						<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
 						<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
 						<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
 						<!--<a href="#" class="social-btn ?">?</a>-->
 					</section>
 						
-					<section>
+					<section class="ads colomn-right">
 						<p>Давайте дружить, это выгодно!</p>
 						<p>Скидка 10% для друзей из социальных сетей.</p>
 					</section>
