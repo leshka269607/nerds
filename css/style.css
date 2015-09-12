@@ -1,7 +1,76 @@
-/*  div, nav, section, article, header, footer, form, a {
+/* div, nav, section, article, header, footer, form, a {
 	outline: 1px solid red;
-} */
+}*/
 
+@charset "UTF-8";
+
+ @font-face {
+  font-family: 'symbols-nerds';
+  src: url('../font/symbols-nerds.eot?27841936');
+  src: url('../font/symbols-nerds.eot?27841936#iefix') format('embedded-opentype'),
+       url('../font/symbols-nerds.woff?27841936') format('woff'),
+       url('../font/symbols-nerds.ttf?27841936') format('truetype'),
+       url('../font/symbols-nerds.svg?27841936#symbols-nerds') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-nerds';
+    src: url('../font/symbols-nerds.svg?27841936#symbols-nerds') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-nerds";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-basket:before { content: '\62'; } /* 'b' */
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-twitter:before { content: '\74'; } /* 't' */
+.icon-vk:before { content: '\76'; } /* 'v' */
+.icon-up-dir:before { content: '\25b2'; } /* 'в–І' */
+.icon-down-dir:before { content: '\25bc'; } /* 'в–ј' */
+.icon-circle:before { content: '\25cb'; } /* 'в—‹' */
+.icon-circle-dot:before { content: '\25cf'; } /* 'в—Џ' */
+.icon-check-off:before { content: '\2610'; } /* 'вђ' */
+.icon-check-on:before { content: '\2611'; } /* 'в‘' */
+.icon-instagramm:before { content: 'рџ“·'; } /* '\1f4f7' */
+
+/************************************ То был иконочный шрифт */
+
+/************************************ Стили страницы */
 body {
 	margin: 0;
 	padding: 0;
@@ -15,7 +84,7 @@ body {
 	color: black;
 	
 	font-weight: normal;
-	font-family: Roboto Medium;
+	font-family: Roboto, San serif;
 }
 
 
@@ -24,7 +93,7 @@ h1 {
 	line-height: 36px;
 	color: black;
 	font-weight: bold;
-	font-family: Myriad Pro Regular;
+	font-family: Roboto, sans-serif;
 }
 
 h2 {
@@ -32,7 +101,7 @@ h2 {
 	line-height: 30px;
 	color: black;
 	font-weight: bold;
-	font-family: Myriad Pro Regular;
+	font-family: Roboto, San serif;
 }
 
 h3 {
@@ -40,7 +109,7 @@ h3 {
 	line-height: 36px;
 	color: black;
 	font-weight: bold;
-	font-family: Myriad Pro Regular;
+	font-family: Roboto, San serif;
 }
 
 
@@ -48,6 +117,7 @@ h3 {
 .layout-center {
   width: 880px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .clearfix::after {
@@ -56,25 +126,60 @@ h3 {
   clear: both;
 }
 
+/************************************ Если нужно горизонтальное меню*/
+.horizon-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.horizon-list li {
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
 /************************************ Шапка */
 .main-header  {
 	background-color: #eeeeee;
 	font-size: 16px;
 }
 
+	/************************************ Живые ссылки */
 .main-header a {
 	text-decoration: none;
 	color: black;
 	font-size: 14px;
 	line-height: 30px;
 	font-weight: bold;
-	font-family: Myriad Pro Regular;
+	font-family: Roboto, San serif;
 }
 
-.main-header ul {
-  margin: 0;
-  padding:0;
-  list-style: none;
+.main-header a:hover {
+	color: #fb565a;
+}
+
+.main-header a:active {
+	color: #959595;
+}
+
+.main-header .active a {
+	position: relative;	
+}
+
+.main-header .active a:hover {
+	color: black;	/*Реакция ссылки на активной странице*/
+}
+
+.main-header .active a:after {
+	content: "";
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #fb565a;
 }
 
 .logo {
@@ -86,42 +191,73 @@ h3 {
 
 .main-navigation {
   float: left;
+  width: 420px;
   margin: 50px 0 0 180px;
-}
-
-.main-navigation li{
-  display: inline-block;
-  vertical-align: top;
 }
 
 .main-navigation a {
   margin-right: 35px;
 }
 
+/* .basket  {
+  float:right;
+  max-width: 100px;
+  margin-top: 50px;
+}
+
+.basket:hover  {
+	color: #fb565a;
+}
+
+.basket:active {
+	color: #959595;
+}
+
+.basket a {	
+	padding-left: 10px;
+	margin-right: 0;
+} */       /** Иконка с помощью <i> **/
+
+
 .basket  {
   float:right;
-  margin: 50px 0 0 60px;
+  max-width: 100px;
+  margin-top: 50px;
 }
 
 .basket a {
-  margin-right: 0px;
+	display: inline-block;
+	vertical-align: top; /* чтобы при желании можно было добавить ещё элементы (но не забудь про ширину)*/
+	
+	position: relative;
+	padding-left: 35px;
 }
 
-.header-line1 {
+.basket a:before {
+	content: "\62";
+	font-family: symbols-nerds;
+	font-size: 20px;
+	
+	display: inline-block;
+	vertical-align: top;	
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+}
+
+.header-top {
 	margin-bottom: 50px;
 }
 
 .slogan {
-	float: left;
 	width: 370px;
 	min-height: 225px;
 }
 
 .slogan .btn {
-	display: block;
-	
-	width: 240px;
-	height: 40px;
+	color: white;
+	margin: 0;
+	padding: 5px 0;
 }
 
 .slider-indicator {
@@ -133,11 +269,10 @@ h3 {
 }
 
 .carousel {
-	float: right;
-	width: 340px;
+	width: 338px;
 }
 
-.header-line2 {
+.main-header .slider {
 	margin-bottom: 80px;
 }
 
@@ -147,8 +282,15 @@ h3 {
 .websites, .apps, .presentations {
 	float: left;
 	width: 240px;
+	font-size: 15px;
+	line-height: 22px;
 	min-height: 300px;
 	margin-right: 80px;
+}
+
+.services .btn {
+	width: 135px;
+	margin-top: 25px;
 }
 
 .websites {
@@ -161,10 +303,35 @@ h3 {
 	background-repeat: no-repeat;
 }
 
+.apps .btn {
+	background-color: #00ca74;
+}
+
+.apps .btn:hover{
+	background-color: #01a25e;
+}
+
+.apps .btn:active{
+	background-color: #009053;
+}
+
+
 .presentations {
 	background-image: url('../img/presentations.png');
 	background-repeat: no-repeat;
 	margin-right: 0;
+}
+
+.presentations .btn {
+	background-color: #efc84a;
+}
+
+.presentations .btn:hover {
+	background-color: #d6ae2c;
+}
+
+.presentations .btn:active {
+	background-color: #c09b24;
 }
 
 .services h2 {
@@ -196,7 +363,7 @@ h3 {
 .description p {
 	font-size: 16px;
 	line-height: 22px;
-	font-family: Myriad Pro Regular;
+	font-family: Roboto, San serif;
 }
 
 .description ul {
@@ -237,42 +404,122 @@ h3 {
 
 /************************************ Подвал */
 	/************************************ Карта */
+.main-footer {
+	position: relative;
+}
+
 .map {
 	background-image: url("../img/map.jpg");
 	width: 1200px;
 	height: 416px;
 	margin: 0 auto;
+	margin-bottom: 70px;
 }
 
 .footer-contacts {
-	float: left;
-	width: 240px;
-	height: 240px;
+	position: relative;
+	top: 86px;
+	left: 0px;	
+	
+	width: 230px;
+	height: 210px;
 	background-color: white;
+	padding: 30px 0 0 20px;
+	margin: 0;
+}
+
+.footer-contacts span {
+	font-size: 16px;
+	line-height: 30px;
+}
+
+
+.footer-contacts .adres-info {
+	font-size: 16px;
+	line-height: 20px;
+	color: #666666;
+}
+
+.tel {
+	font-size: 16px;
+	line-height: 20px;
+	color: #666666;
 }
 
 .pointer {
-	float: right;
+	position: relative;
+	top: -135px;
+	left: 680px;
 	width: 230px;
 	height: 190px;
-	margin-top: 110px;
 	background-image: url("../img/pointer.png");
-	background-position: 30px;
 	background-repeat: no-repeat;
+}
+
+.pointer img {
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	width: 92px;
+	height: 37px;
 }
 
 .footer-social {
 	float: left;
 	width: 240px;
 	margin-right: 80px;
+	font-size: 0;
 }
 
 .social-btn {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
+	position: relative;
 	width: 60px;
-	height: 40px;
-	margin-right: 20px;
+	height: 60px;
+	
+	margin-right: 30px;
+	background-color: #e1e1e1;
+
+	-moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+	
+	font-family: Symbols-nerds;
+	font-size: 30px;
+	color: white;	
+}
+
+.social-btn:hover {
+	background-color: #fb565a;
+}
+
+.social-btn:active {
+	background-color: #d6494d;
+}
+
+.social-btn-vk:before {
+	content: "\76";
+	
+	position: absolute;	
+	top: 15px;
+	left: 15px;
+}
+
+.social-btn-fb:before {
+	content: "\66";
+	
+	position: absolute;	
+	top: 17px;
+	left: 22px;
+}
+
+.social-btn-inst:before {
+	content: '?';
+	
+	position: absolute;	
+	top: 17px;
+	left: 22px;
 }
 
 .social-btn-inst {
@@ -282,6 +529,44 @@ h3 {
 .ads {
 	float: right;
 	width: 550px;
+}
+
+.ads p:first-child {
+	margin-top: 0;
+	margin-bottom: 18px;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.ads p:last-child {
+	font-size: 16px;
+	line-height: 22px;
+	color: #283136;
+	padding-left: 20px;
+}
+
+/************************************ Кнопка*/
+.btn {
+	display: block;
+	width: 200px;
+	height: 25px;
+	background-color: #fb565a;
+	padding-top: 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.btn:hover {
+	background-color: #d6494d;
+}
+
+.btn:active {
+	background-color: #9b2d30;
 }
 
 /*************************** Внутреняя страничка */
@@ -297,6 +582,8 @@ h3 {
 }
 
 .filter ul {
+	margin: 0px;
+	padding: 0px;
 	list-style: none;
 }
 
@@ -326,27 +613,10 @@ h3 {
 	margin-right: 0px;
 }
 
-.shop ul {
-	list-style: none;
-}
-
-.shop li{
-	display: inline-block;
-}
-
 .sketch {
 	width: 240px;
 	height: 240px;
 }
-
-.page-nubmer ul {
-	list-style: none;
-}
-
-.page-nubmer li {
-	display: inline-block;
-}
-
 
 
 

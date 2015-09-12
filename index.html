@@ -4,18 +4,20 @@
 		<meta charset="utf-8">
 		<title>Nerd's Главная</title>
 		
+		<link href='https://fonts.googleapis.com/css?family=Roboto:500,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="main-header layout-center">
-			<div class="header-line1 clearfix">
+			<div class="header-top clearfix">
 				<div class="logo">
-					<a href="#"><img src="img/logo.png" width="139" height="56" alt= "Логотип Nerd's"></a>
+					<a href="index.html"><img src="img/logo.png" width="139" height="56" alt= "Логотип Nerd's"></a>
 				</div>
 				
 				<nav class="main-navigation">
-					<ul>
-						<li><a href="#">Студия</a></li>
+					<ul class="horizon-list">
+						<li class="active"><a href="#">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
 						<li><a href="#">Магазин</a></li>
 						<li><a href="#">Контакты</a></li>
@@ -23,16 +25,47 @@
 				</nav>
 				
 				<div class="basket">
+					<!-- <i class="icon-basket"></i> -->
 					<a href="#">Корзина</a>
 				</div>
 			</div>
 			
-			<div class="header-line2 clearfix">
+ 			<div class="slider clearfix">
+				<div class="slide1">
+					<div class="slogan colomn-left">
+						<h1>Долго, дорого,<br> скрупулезно.</h1>
+						<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+						<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+					</div>
+					
+					<div class="carousel colomn-right">
+						<img src="img\slide1.png" width="338" height="231" alt="Адаптивные сайты">
+					</div>
+				</div>
+				
+<!--		<div class="slide2">
 				<div class="slogan">
-					<h1>Долго, дорого,<br> скрупулезно.</h1>
-					<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+					<h1>Любите ли вы математику,<br> как любим ее мы?</h1>
+					<p>Нашим дизайнерам мы удаляем нейроны, ответственные<br> за креатив, чтобы дать им возможность все просчитать.</p>
 					<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
 				</div>
+				
+				<div class="carousel">
+					<img src="img\slide2.png" width="230" height="249" alt="Точный расчёт">
+				</div>
+			</div>-->
+			
+<!--		<div class="slide3">
+				<div class="slogan">
+					<h1>Только наркотики,<br> только хардкор!</h1>
+					<p>Все дизайнерские решения в нашей компании принимаются<br> только под воздействием качественных галлюциногенов</p>
+					<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+				</div>
+				
+				<div class="carousel">
+					<img src="img\slide3.png" width="333" height="319" alt="Уникальный дизайн">
+				</div>
+			</div>-->		
 				
 				<div class="slider-indicator">
 					<label><input class="active-indicator" type="radio" name="slide" checked/></label>
@@ -40,9 +73,6 @@
 					<label><input type="radio" name="slide"/></label>
 				</div>
 				
-				<div class="carousel">
-					<img src="img\sidebar1.png" alt="">
-				</div>
 			</div>
 		</header>
 
@@ -104,31 +134,37 @@
 		</main>
 
 		<footer class="main-footer">
-			<section class="map">
-				<div class="layout-center clearfix">
+		
+			<section class="map">			
+				<div class="layout-center">
 					<section class="footer-contacts">
-						<p>NЁRDS DESIGN STUDIO</p>
-						191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>						
-						тел. +7 (812) 275-75-75
+						<span>NЁRDS DESIGN STUDIO</span>
+						
+						<p class="adres-info">
+							191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>	
+						</p>
+						<p class="tel">тел. +7 (812) 275-75-75</p>
+						
 						<a class="btn" href="#">НАПИШИТЕ НАМ</a>
 					</section>
 					
-					<section class="pointer"></section>
-					
-					</div>
+					<section class="pointer">
+						<img src="img/logo.png" width="92" height="37" alt= "Логотип Nerd's">
+					</section>	
+				</div>			
 			</section>
-		
+				
 			<div class="layout-center clearfix">				
 				<div class="discount">
 					<section class="footer-social colomn-left">
-						<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
-						<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
-						<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
+						<a href="#" class="social-btn social-btn-vk"></a>
+						<a href="#" class="social-btn social-btn-fb"></a>
+						<a href="#" class="social-btn social-btn-inst"></a>
 						<!--<a href="#" class="social-btn ?">?</a>-->
 					</section>
 						
 					<section class="ads colomn-right">
-						<p>Давайте дружить, это выгодно!</p>
+						<p class="frend">Давайте дружить, это выгодно!</p>
 						<p>Скидка 10% для друзей из социальных сетей.</p>
 					</section>
 				</div>
