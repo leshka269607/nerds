@@ -153,6 +153,7 @@ h4 {
 .btn:active {
 	background-color: #b63538;
 	border-top: 2px solid #9b2d30;
+	padding-top: 8px;
 }
 
 /************************************ Общие классы:
@@ -409,7 +410,7 @@ h4 {
 }
 
 .presentations {
-	background-image: url('../img/presentations.png');
+	background-image: url("../img/presentations.png");
 	background-repeat: no-repeat;
 	margin-right: 0;
 }
@@ -425,7 +426,6 @@ h4 {
 .presentations .btn:active {
 	background-color: #c09b24;
 	border-top: 2px solid #a3841f;
-	padding-top: 8px;
 }
 
 .services h2 {
@@ -607,8 +607,7 @@ h4 {
 
 .footer-contacts .btn {
 	width: 205px;
-	padding: 9px 0;
-	
+	padding: 9px 0;	
 }
 
 /************************************ Подвал
@@ -659,9 +658,15 @@ h4 {
 	line-height: 60px;		/*Центруем иконку по вертикали*/
 }
 
-.social-btn:hover {background-color: #fb565a;}
-.social-btn:active {background-color: #d6494d;}
+.social-btn:hover {
+	background-color: #fb565a;
+}
 
+.social-btn:active {
+	background-color: #d6494d;
+	border-top: 2px solid #b63e42;
+	padding-top: 1px;
+}
 
 .social-btn-vk:before {content: "\76";}
 .social-btn-fb:before {content: "\66";}
@@ -694,9 +699,13 @@ h4 {
 /************************************ Страница магазин-каталог */
 .welcom {
 	text-align: center;
-	padding-bottom: 90px;
+	font-size: 40px;
+	line-height: 47px;
+	padding-bottom: 85px;
+	text-transform: uppercase;
+	margin-top: 65px;
+	margin-bottom: 55px;
 }
-
 
 /************************************ Фильтр */
 .filter {
@@ -718,7 +727,7 @@ h4 {
 	padding-left: 20px;
 	margin-bottom: 15px;
 	border-radius: 5px;
-	background: #f1f1f;
+	background-color: #f1f1f1;
 }
 
 .range-controls .scale {
@@ -739,18 +748,18 @@ h4 {
 	width: 4px;
 	height: 4px;
 	cursor: pointer;
-	border: 8px solid #fff;
+	border: 10px solid #fff;
 	border-radius: 50%;
 	background: #ababab;
 	box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 
 .range-controls .toggle-min {
-	left: 50px;
+	left: 0;
 }
 
 .range-controls .toggle-max {
-	left: 110px;
+	left: 160px;
 }
 
 .price-controls {
@@ -787,8 +796,7 @@ h4 {
 	list-style: none;
 }
 
-.grid p,
-.features p {
+.filter p {
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 500;
@@ -797,9 +805,13 @@ h4 {
 
 /************************************ Фильтр
 											=> Тип сетки */
+.grid {
+	margin-top: 42px;
+}
+	
 .grid li {
 	color: #283136;
-	margin-bottom: 15px;
+	margin-bottom: 11px;
 }
 
 .grid input {
@@ -838,9 +850,13 @@ h4 {
 
 /************************************ Фильтр
 											=> Особенности */
+.features {
+	padding-top: 17px;
+}
+
 .features li {
 	color: #283136;
-	margin-bottom: 15px;
+	margin-bottom: 13px;
 }
 
 .features input {
@@ -882,7 +898,8 @@ h4 {
 .filter .btn {	
 	display: inline-block;
 	vertical-align: middle;
-	margin-top: 15px;
+	margin-top: 45px;
+	margin-left: 3px;
 	padding: 10px 0; 
 	font-family: "Roboto", "Arial", sans-serif;
 	line-height: 18px;
@@ -901,9 +918,14 @@ h4 {
 }
 
 /************************************ Блок с товарами */
-
 .catalog {
 	width: 570px;
+	padding-top: 22px;
+}
+
+.sort {
+	margin-left: 10px;
+	margin-bottom: 10px;
 }
 
 .sort li {
@@ -911,7 +933,7 @@ h4 {
 	line-height: 18px;
 	min-height: 30px;
 	font-weight: 500;
-	padding-right: 40px;
+	padding-right: 47px;
 	border-bottom: 3px dotter #00ca74;
 	text-transform: uppercase;
 }
@@ -941,6 +963,8 @@ h4 {
 .sort li:last-child {
 	font-size: 0px;
 	line-height: 22px;
+	padding-left: 42px;
+	padding-right: 0px;
 }
 
 .sort-indicator .icon-down-dir:before {
@@ -966,7 +990,8 @@ h4 {
 	position: relative;
 	width: 240px;
 	min-height: 270px;
-	margin-right: 80px;
+	margin-left: 10px;
+	margin-right: 66px;
 	margin-bottom: 80px;
 }
 
@@ -1022,31 +1047,70 @@ h4 {
 	margin-left: -100px;
 	margin-top: -80px;
 	text-align: center;
+	color: #283136;
+	font-size: 14px;
+	line-height: 18px;
 }
+
+.product-name {
+	font-size: 18px;
+	line-height: 9px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.product-name.modern {
+	line-height: 24px;
+}
+
 
 .product-info .btn {
 	width: 140px;
 	margin: 0 auto;
+	font-size: 18px;
+	line-height: 9px;
+	padding: 15px 0;
 }
 
 
 /************************************ Навигация по страничкам каталога */
+.page-nubmer {
+	margin-bottom: 84px;
+	margin-left: 10px;
+}
+
 .page-nubmer .btn {
-	width: 36px;
+	width: 20px;
 	background-color: #f1f1f1;
+	padding: 10px 8px;
 	margin-right: 10px;
 	color: black;
 	border-radius: 2px;
-	
 }
 
-.page-nubmer li:first-child {
-	background-color: white;
-	border: 2px solid #f1f1f1;
+.page-nubmer .btn:hover {
+	background-color: #e5e5e5;
+}
+
+.page-nubmer .btn:active {
+	background-color: #d5d5d5;
+	border-top: 2px solid #b5b5b5;
+}
+
+.active-page {
+	width: 20px;
+	padding: 8px 7px;
+	border-radius: 2px;
+	border: 2px solid #f1f1f1;	
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;	
+	margin-right: 10px;
+	color: black;
 }
 
 .page-nubmer .next {
-	width: 135px;
+	width: 130px;
 }
 
 

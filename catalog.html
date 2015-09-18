@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title>Nerd's Каталог</title>
@@ -10,6 +10,7 @@
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
+	
 	<body>
 		<header class="main-header">
 			<div class="layout-center">
@@ -28,7 +29,6 @@
 					</nav>
 					
 					<div class="basket">
-						<!-- <i class="icon-basket"></i> -->
 						<a href="#">Корзина</a>
 					</div>
 				</div>
@@ -40,11 +40,13 @@
 		
 			<div class="colomn-left">
 			
-				<form class="filter" action="#" method="get">				
-					<div class="range-filter">					
+				<form class="filter" action="#" method="get">					
+					<div class="range-filter">
+						<p>СТОИМОСТЬ:</p>
+						
 						<div class="range-controls">
 							<div class="scale">
-								<div class="bar" style="margin-left: 20%; width: 30%"></div>
+								<div class="bar" style="margin-left: 0; width: 80%"></div>
 							</div>
 							
 							<div class="toggle toggle-min"></div>
@@ -52,8 +54,8 @@
 						</div>
 						
 						<div class="price-controls">
-							<label class="min-price">от <input name="min-price" type="text" value="0"></label>
-							<label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+							<label class="min-price">ОТ <input name="min-price" type="text" value="0"></label>
+							<label class="max-price">ДО <input name="max-price" type="text" value="15000"></label>
 						</div>
 					</div>
 								
@@ -138,8 +140,13 @@
 							</ul>
 						</div>
 						
-						<div class="sketch">					
+						<div class="sketch">			
 							<img src="img/aviator.jpg">
+								<div class="product-info">								
+									<p class="product-name">AVIATOR</p>
+									<p class="product-description">Одностраничный макет<br>с авторским дизайном</p>
+									<a href="# "class="btn">8000 Р.</a>
+								</div>
 						</div>
 					</article>
 					
@@ -154,7 +161,7 @@
 						
 						<div class="sketch">
 						<img src="img/sunset.jpg">
-							<div class="product-info sunset">								
+							<div class="product-info">								
 								<p class="product-name">Sunset</p>
 								<p class="product-description">Интернет-магазин<br>с личным кабинетом</p>
 								<a href="# "class="btn">10000 Р.</a>
@@ -173,6 +180,11 @@
 						
 						<div class="sketch">					
 							<img src="img/forte.jpg">
+							<div class="product-info">								
+								<p class="product-name">forte</p>
+								<p class="product-description">Отличный макет<br>для личного блога</p>
+								<a href="# "class="btn">5000 Р.</a>
+							</div>
 						</div>
 					</article>
 					
@@ -187,6 +199,11 @@
 						
 						<div class="sketch">					
 							<img src="img/modern.jpg">
+							<div class="product-info">								
+								<p class="product-name modern">Modern Organic<br> THAI</p>
+								<p class="product-description">Сайт для ресторана<br>быстрого питания</p>
+								<a href="# "class="btn">12000 Р.</a>
+							</div>
 						</div>
 					</article>
 					
@@ -201,6 +218,11 @@
 						
 						<div class="sketch">					
 							<img src="img/avenue.jpg">
+							<div class="product-info">								
+								<p class="product-name">Avenue</p>
+								<p class="product-description">Макет для блога<br>о путешествиях</p>
+								<a href="# "class="btn">8000 Р.</a>
+							</div>
 						</div>
 					</article>
 					
@@ -215,13 +237,18 @@
 						
 						<div class="sketch">					
 							<img src="img/dovetail.jpg">
+							<div class="product-info">								
+								<p class="product-name">DOVETAIL</p>
+								<p class="product-description">Интернет-магазин<br>с галереей товаров</p>
+								<a href="# "class="btn">14000 Р.</a>
+							</div>
 						</div>
 					</article>
 				</div>
 				
 				<div class="page-nubmer">
 					<ul class="horizon-list">
-						<li class="btn">1</li>
+						<li class="active-page">1</li>
 						<li><a class="btn" href="#">2</a></li>
 						<li><a class="btn" href="#">3</a></li>
 						<li><a class="btn next" href="#">СЛЕДУЮЩАЯ</a></li>
@@ -267,5 +294,7 @@
 				</div>
 			</div>
 		</footer>
+		
 	</body>
+	
 </html>
