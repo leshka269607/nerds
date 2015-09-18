@@ -1,147 +1,164 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title>Nerd's Главная</title>
 		
-		<link href='https://fonts.googleapis.com/css?family=Roboto:500,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 		
+		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
+	
 	<body>
-		<header class="main-header layout-center">
-			<div class="header-top clearfix">
-				<div class="logo">
-					<a href="index.html"><img src="img/logo.png" width="139" height="56" alt= "Логотип Nerd's"></a>
-				</div>
-				
-				<nav class="main-navigation">
-					<ul class="horizon-list">
-						<li class="active"><a href="#">Студия</a></li>
-						<li><a href="#">Клиенты</a></li>
-						<li><a href="#">Магазин</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</nav>
-				
-				<div class="basket">
-					<!-- <i class="icon-basket"></i> -->
-					<a href="#">Корзина</a>
-				</div>
-			</div>
-			
- 			<div class="slider clearfix">
-				<div class="slide1">
-					<div class="slogan colomn-left">
-						<h1>Долго, дорого,<br> скрупулезно.</h1>
-						<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-						<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+		<header class="main-header">
+			<div class="layout-center">
+				<div class="header-top clearfix">
+					<div class="logo">
+						<a href="index.html"><img src="img/logo.png" width="139" height="56" alt= "Логотип Nerd's"></a>
 					</div>
 					
-					<div class="carousel colomn-right">
-						<img src="img\slide1.png" width="338" height="231" alt="Адаптивные сайты">
+					<nav class="main-navigation">
+						<ul class="horizon-list">
+							<li class="active"><a href="#">Студия</a></li>
+							<li><a href="#">Клиенты</a></li>
+							<li><a href="catalog.html">Магазин</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</nav>
+					
+					<div class="basket">
+						<a href="#">Корзина</a>
 					</div>
 				</div>
 				
-<!--		<div class="slide2">
-				<div class="slogan">
-					<h1>Любите ли вы математику,<br> как любим ее мы?</h1>
-					<p>Нашим дизайнерам мы удаляем нейроны, ответственные<br> за креатив, чтобы дать им возможность все просчитать.</p>
-					<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+				<div class="slider clearfix">				
+					<input id="btn_1" type="radio" name="toggle" checked/>
+					<input id="btn_2" type="radio" name="toggle"/>
+					<input id="btn_3" type="radio" name="toggle"/>
+					
+					<div class="slider-controls">
+						<label for="btn_1"></label>
+						<label for="btn_2"></label>
+						<label for="btn_3"></label>
+					</div>
+					
+					<div class="slide1">
+						<div class="slogan colomn-left">
+							<h1>Долго, дорого,<br> скрупулезно.</h1>
+							<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+							<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+						</div>
+						
+						<div class="carousel colomn-right">
+							<img src="img\slide1.png" width="338" height="231" alt="Адаптивные сайты">
+						</div>
+					</div>
+						
+					<div class="slide2">
+						<div class="slogan colomn-left">
+							<h1>Любите ли вы математику,<br> как любим ее мы?</h1>
+							<p>Нашим дизайнерам мы удаляем нейроны, ответственные<br> за креатив, чтобы дать им возможность все просчитать.</p>
+							<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+						</div>
+						
+						<div class="carousel colomn-right">
+							<img src="img\slide2.png" width="230" height="249" alt="Точный расчёт">
+						</div>
+					</div>
+					
+					<div class="slide3">
+						<div class="slogan colomn-left">
+							<h1>Только наркотики,<br> только хардкор!</h1>
+							<p>Все дизайнерские решения в нашей компании принимаются<br> только под воздействием качественных галлюциногенов</p>
+							<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+						</div>
+						
+						<div class="carousel colomn-right">
+							<img src="img\slide3.png" width="333" height="319" alt="Уникальный дизайн">
+						</div>
+					</div>
 				</div>
-				
-				<div class="carousel">
-					<img src="img\slide2.png" width="230" height="249" alt="Точный расчёт">
-				</div>
-			</div>-->
-			
-<!--		<div class="slide3">
-				<div class="slogan">
-					<h1>Только наркотики,<br> только хардкор!</h1>
-					<p>Все дизайнерские решения в нашей компании принимаются<br> только под воздействием качественных галлюциногенов</p>
-					<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
-				</div>
-				
-				<div class="carousel">
-					<img src="img\slide3.png" width="333" height="319" alt="Уникальный дизайн">
-				</div>
-			</div>-->		
-				
-				<div class="slider-indicator">
-					<label><input class="active-indicator" type="radio" name="slide" checked/></label>
-					<label><input type="radio" name="slide"/></label>
-					<label><input type="radio" name="slide"/></label>
-				</div>
-				
 			</div>
 		</header>
 
-		<main class="layout-center">
+		<div class="main-content layout-center">
 			<article class="services clearfix">
-				<section class="websites"><!-- background-image img/websites.png -->
+				<section class="websites">
 					<h2>Веб-сайты</h2>
 					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
 					<a class="btn" href="">ЗАКАЗАТЬ</a>
 				</section>
 				
-				<section class="apps"> <!-- background-image img/apps.png -->
+				<section class="apps">
 					<h2>Приложения</h2>
-					<p>Покорите топ-10 приложений в AppStrore и Google Play</p>
+					<p>Покорите топ-10 приложений<br>в AppStrore и Google Play</p>
 					<a class="btn" href="">ЗАКАЗАТЬ</a>
 				</section>
 				
-				<section class="presentations"> <!-- background-image img/presentations.png -->
+				<section class="presentations">
 					<h2>Презентации</h2>
 					<p>Вы даже не подозреваете, насколько вы изумительны!</p>
 					<a class="btn" href="">ЗАКАЗАТЬ</a>
 				</section>
 			</article>
 			
-			<article class="description clearfix">
-				<section class="colomn-left">
+			<article class="description clearfix">			
+				<div>
+					<div class="colomn-left">
 					<h3>Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</h3>
-					<p>
-						Исповедуем принципы минимализма и чистоты. Ставим математический<br>
-						расчет выше креатива. Работаем не покладая рук, как роботы.
-					</p>
 					
-					<p>Выполняем заказы на разработку:</p>
-					<ul>
-						<li><img src="#" alt="">Веб-сайтов любой сложности</li>
-						<li><img src="#" alt="">Мобильных приложений для iOS и Android</li>
-						<li><img src="#" alt="">Слайдшоу и видео для корпоративных презентаций</li>
-					</ul>
-				</section>
-				
-				<section class="colomn-right">
-					<img src="img/logo.png" alt="">
-					<p>SINCE 2004</p>
+						<p>
+							Исповедуем принципы минимализма и чистоты. Ставим математический<br>
+							расчет выше креатива. Работаем не покладая рук, как роботы.
+						</p>
+					</div>
 					
-					<p>КАК Мы работаем:</p>
-					<ul>
-						<li><img src="#" alt="">С самоотдачей 146%</li>
-						<li><img src="#" alt="">Соблюдая сроки на 100%</li>
-						<li><img src="#" alt="">По предоплате 50%</li>
-					</ul>
-				</section>
+					<div class="logo colomn-right">
+						<a href="#"><img src="img/logo.png" width="187" height="75" alt="Nёrds"></a>
+						<div class="logo-description"><p>SINCE 2004</p></div>
+					</div>
+				</div>
+			
+				<div>
+					<div class="colomn-left">
+						<h4>Выполняем заказы на разработку:</h4>
+						<ul>
+							<li>Веб-сайтов любой сложности</li>
+							<li>Мобильных приложений для iOS и Android</li>
+							<li>Слайдшоу и видео для корпоративных презентаций</li>
+						</ul>
+					</div>
+					
+					<div class="schedule colomn-right">
+						<h4>как мы работаем:</h4>
+						
+						<ul>
+							<li>С самоотдачей 146%</li>
+							<li>Соблюдая сроки на 100%</li>
+							<li>По предоплате 50%</li>
+						</ul>
+					</div>
+				</div>
 			</article>
 			
 			<article class="logos">
-					<img src="img/glukhanko.png" width="199" height="37" alt="Glukhanko">
-					<img src="img/htmlAcademy.png" width="199" height="68" alt="html academy">
-					<img src="img/borodinski.png" width="209" height="86" alt="Borodinski">
+					<a href="#"><img src="img/glukhanko.png" width="199" height="37" alt="Glukhanko"></a>
+					<a href="#"><img src="img/htmlAcademy.png" width="199" height="68" alt="html academy"></a>
+					<a href="#"><img src="img/borodinski.png" width="209" height="86" alt="Borodinski"></a>
 			</article>
-		</main>
+		</div>
 
 		<footer class="main-footer">
 		
 			<section class="map">			
 				<div class="layout-center">
 					<section class="footer-contacts">
-						<span>NЁRDS DESIGN STUDIO</span>
+						<h5>NЁRDS DESIGN STUDIO</h5>
 						
 						<p class="adres-info">
-							191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>	
+							191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8	
 						</p>
 						<p class="tel">тел. +7 (812) 275-75-75</p>
 						
@@ -164,11 +181,13 @@
 					</section>
 						
 					<section class="ads colomn-right">
-						<p class="frend">Давайте дружить, это выгодно!</p>
+						<h3>Давайте дружить, это выгодно!</h3>
 						<p>Скидка 10% для друзей из социальных сетей.</p>
 					</section>
 				</div>
 			</div>
 		</footer>
+		
 	</body>
+	
 </html>
