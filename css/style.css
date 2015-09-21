@@ -85,27 +85,22 @@ body {
 	font-family: "Roboto", "Arial", san-serif;
 }
 
-
 h1 {
 	font-size: 36px;
 	line-height: 36px;
-	font-weight: 500;
-	font-family: "Roboto", "Arial", san-serif;
+	font-weight: 600;
 }
 
 h2 {
 	font-size: 18px;
 	line-height: 30px;
-	font-weight: bold;
-	font-family: "Roboto", "Arial", san-serif;
+	font-weight: 600;
 }
 
 h3 {
 	font-size: 36px;
 	line-height: 36px;
-	font-weight: bold;
-	color: black;
-	font-family: "Roboto", "Arial", san-serif;
+	font-weight: 600;
 }
 
 h4 {
@@ -119,15 +114,15 @@ h4 {
 /************************************ Общие классы:
 													=> Для создания сетки */
 .layout-center {
-  width: 880px;
-  margin: 0 auto;
-  padding: 0 10px;
+	width: 880px;
+	margin: 0 auto;
+	padding: 0 10px;
 }
 
 .clearfix::after {
-  content: '';
-  display: table;
-  clear: both;
+	content: '';
+	display: table;
+	clear: both;
 }
 
 /************************************ Общие классы:
@@ -139,8 +134,7 @@ h4 {
 	padding: 10px;
 	border-radius: 3px;
 	text-decoration: none;
-	color: white;
-	
+	color: white;	
 	font-size: 12px;
 	line-height: 18px;
 	text-align: center;
@@ -172,32 +166,46 @@ h4 {
 }
 
 /************************************ Шапка */
-.main-header  {
+.main-header {
 	background-color: #eeeeee;
 	font-size: 16px;
+}
+
+.main-header .logo {
+	float: left;
+	width: 139px;
+	min-height: 56px;
+	padding-top: 30px;
+}
+
+.main-header .logo img {
+	width: 139px;
+	height: 56px;
 }
 
 	/************************************ Шапка 
 												=> Верхнее меню */
 .main-navigation {
-  float: left;
-  width: 420px;
-  margin: 56px 0 0 182px;
+	float: left;
+	width: 420px;
+	margin: 56px 0 0 182px;
+}
+
+.main-navigation li {
+	margin-right: 45px;
+}
+
+.main-navigation li:last-child {
+	margin-right: 0;
 }
 
 .main-navigation a {
-	margin-right: 45px;
 	text-decoration: none;
 	color: black;
 	font-size: 14px;
 	line-height: 30px;
 	font-weight: 400;
 	text-transform: uppercase;
-	font-family: "Roboto", "Arial", san-serif;
-}
-
-.main-navigation li:last-child a { 					/*???????????????????*/
-	margin-right: 0;
 }
 
 .main-navigation a:hover {
@@ -226,23 +234,16 @@ h4 {
 	background-color: #fb565a;
 }
 
-.main-header .logo {
-	float: left;
-	width: 139px;
-	height: 56px;
-	padding-top: 30px;
-}
-
-.basket  {
-  float:right;
-  max-width: 100px;
-  margin-top: 56px;
-  font-size: 0;
+.basket {
+	float:right;
+	max-width: 100px;
+	margin-top: 56px;
+	font-size: 0;
 }
 
 .basket a {
 	display: inline-block; /* чтобы при желании можно было добавить ещё элементы (но не забудь про ширину)*/
-	vertical-align: top;	
+	vertical-align: top;
 	position: relative;
 	padding-left: 30px;
 	color: black;
@@ -256,18 +257,18 @@ h4 {
 .basket a:before {
 	content: "\62";
 	display: inline-block;
-	position: absolute;	
+	vertical-align: top;
+	position: absolute;
 	top: 0;
 	left: 0;
 	font-family: "Symbols-nerds";
 	text-transform: lowercase;
 	font-size: 16px;
-	vertical-align: top;	
 	color: #a6a6a6;
 }
 
 .basket a:hover:before,
-.basket a:hover {		/*********************************Так можно?*/
+.basket a:hover {
 	color: #fb565a;		/*цвет иконки корзины и текста*/
 }
 
@@ -285,7 +286,8 @@ h4 {
 .main-header .slider {
 	position: relative;
 	min-height: 330px;
-	margin-bottom: 54px;
+	margin-bottom: 50px;
+	overflow: hidden;
 }
 
 .slider input[type="radio"] {
@@ -306,9 +308,7 @@ h4 {
 
 .slogan .btn {
 	width: 220px;
-	padding: 10px;
 	text-transform: uppercase;
-	font-weight: 300;
 }
 
 .slider-controls {
@@ -336,7 +336,22 @@ h4 {
 #btn_1:checked ~ .slider-controls label[for="btn_1"],
 #btn_2:checked ~ .slider-controls label[for="btn_2"],
 #btn_3:checked ~ .slider-controls label[for="btn_3"] { 
-    background-color:#c3c3c3;
+	background-color:#c3c3c3;
+}
+
+.slide1 img {
+	width: 338px;
+	height: 231px;
+}
+
+.slide2 img {
+	width: 230px;
+	height: 249px;
+}
+
+.slide3 img {
+	width: 333px;
+	height: 319px;
 }
 
 .slide1,
@@ -358,7 +373,7 @@ h4 {
 }
 
 .carousel {
-	width: 338px;
+	min-width: 338px;
 	text-align: right;
 }
 
@@ -428,14 +443,16 @@ h4 {
 	border-top: 2px solid #a3841f;
 }
 
-.services h2 {
-	margin-top: 145px;
-}
-
 .services {
 	border-bottom: 2px solid #eee;
 	padding-bottom: 80px;
 	margin-bottom: 30px;
+	color: #283136;
+}
+
+.services h2 {
+	margin-top: 145px;
+	color: black;
 }
 
 		/************************************ Основной контент
@@ -443,7 +460,6 @@ h4 {
 .colomn-left {
 	float: left;
 }
-
 
 .description {
 	margin-bottom: 45px;
@@ -460,6 +476,12 @@ h4 {
 .description h3 {
 	margin-bottom: 0px;
 	color: black;
+}
+
+.description ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .description li {
@@ -487,7 +509,7 @@ h4 {
 	position: relative;
 	display: inline;
 	z-index: 2;
-	margin-left: 40px;
+	margin-left: 20px;
 	padding: 0 12px;	
 	font-size: 16px;
 	line-height: 30px;
@@ -499,20 +521,21 @@ h4 {
 .logo-description:after {
 	content: "";
 	position: relative;
-	top: 10px;
+	top: 6px;
 	z-index: 1;
 	display: block;
 	border-bottom: 2px solid #eee;
+	margin-left: -40px;
+}
+
+.logo img {
+	width: 187px;
+	height: 75px;
 }
 
 .schedule {
 	margin-right: 15px;
-}
-
-.description ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	color: #283136;
 }
 
 		/************************************ Основной контент
@@ -531,18 +554,22 @@ h4 {
 
 /************************************ Основной контент
 														=> Блок с логотипами*/
-
-.logos {    
-    margin-bottom: 90px;
-    padding-bottom: 30px;
+.logos {
+	margin-bottom: 90px;
+	padding-bottom: 30px;
 	padding-left: 10px;
-    border-bottom: 2px solid #eeeeee; 
+	border-bottom: 2px solid #eeeeee;
+}
+
+.logos img {
+	max-width: 209px;
+	max-height: 86px;
 }
 
 .logos a {
 	display: inline-block;
-    margin-right: 115px;
-    vertical-align: middle;
+	margin-right: 115px;
+	vertical-align: middle;
 	opacity: 0.2;
 }
 .logos a:nth-child(3) {
@@ -560,12 +587,20 @@ h4 {
 }
 
 .map {
-	background-image: url("../img/map.jpg");
 	width: 100%;
 	height: 416px;
 	margin: 0 auto;
 	margin-bottom: 72px;
 	overflow: hidden;
+	background-image: url("../img/map.jpg");
+	background-size: cover;
+}
+
+.map-yandex {
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	height: 416px;
 }
 
 /************************************ Подвал
@@ -573,13 +608,13 @@ h4 {
 .footer-contacts {
 	position: relative;
 	top: 86px;
-	left: 0px;	
-	
+	left: 0px;
 	width: 230px;
-	height: 216px;
+	min-height: 216px;
 	background-color: white;
 	padding: 24px 0 0 20px;
 	margin: 0;
+	z-index: 100;
 }
 
 .footer-contacts h5 {
@@ -606,8 +641,7 @@ h4 {
 }
 
 .footer-contacts .btn {
-	width: 205px;
-	padding: 9px 0;	
+	width: 185px;
 }
 
 /************************************ Подвал
@@ -617,10 +651,10 @@ h4 {
 	top: -133px;
 	left: 680px;
 	width: 230px;
-	height: 190px;
+	min-height: 190px;
 	background-image: url("../img/pointer.png");
 	background-repeat: no-repeat;
-	/* overflow: hidden; */ ???????????????????????????
+	z-index: 1;
 }
 
 .pointer img {
@@ -636,8 +670,8 @@ h4 {
 
 .footer-social {
 	float: left;
-	width: 240px;
-	margin-right: 80px;
+	width: 320px;
+	margin-right: 0px;
 	font-size: 0;
 }
 
@@ -646,10 +680,10 @@ h4 {
 	vertical-align: top;
 	position: relative;
 	width: 60px;
-	height: 60px;	
+	height: 60px;
 	margin-right: 25px;
-	background-color: #e1e1e1;	
-    border-radius: 50%;	
+	background-color: #e1e1e1;
+	border-radius: 50%;
 	font-family: "Symbols-nerds";
 	font-size: 23px;
 	color: white;	
@@ -665,15 +699,15 @@ h4 {
 .social-btn:active {
 	background-color: #d6494d;
 	border-top: 2px solid #b63e42;
-	padding-top: 1px;
+	height: 58px;
+	line-height: 57px;
 }
 
 .social-btn-vk:before {content: "\76";}
 .social-btn-fb:before {content: "\66";}
 .social-btn-inst:before {content: "\1f4f7";}
 
-
-.social-btn-inst {
+.social-btn:last-child {
 	margin-right: 0;
 }
 
@@ -764,6 +798,7 @@ h4 {
 
 .price-controls {
 	font-size: 0;
+	color: #283136;
 }
 
 .price-controls label {
@@ -843,9 +878,12 @@ h4 {
 	content: "\25cf";
 }
 
-.grid label:hover,
-.grid input:hover + label:before {
+.grid label:hover {
 	color: #000;
+}
+
+.grid input:hover + label:before {
+	color: #b1b1b1;
 }
 
 /************************************ Фильтр
@@ -866,8 +904,7 @@ h4 {
 .features label {
 	position: relative;
 	display: inline-block;
-	vertical-align: middle;
-	
+	vertical-align: middle;	
 	cursor: pointer;
 	font-size: 16px;
 	line-height: 25px;
@@ -882,15 +919,27 @@ h4 {
 	font-size: 28px;
 	margin-right: 10px;
 	color: #c1c1c1;
+	width: 25px;
 }
 
 .features input:checked + label:before {
 	content: "\2611";
 }
 
-.features label:hover,
-.features input:hover + label:before {
+.features label:hover {
 	color: #000;
+}
+
+.features input:hover + label:before {
+	color: #b5b5b5;
+}
+
+/************************************ Неактивные пункты*/
+
+.filter input:disabled + label,
+.filter input:disabled + label:before {
+	color: #e9e9e9;
+	cursor: default; 
 }
 
 /************************************ Фильтр
@@ -905,9 +954,9 @@ h4 {
 	line-height: 18px;
 	font-size: 12px;
 	font-weight: 500;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 	border: none;
-	outline: none;	
+	outline: none;
 	cursor: pointer;
 	text-align: center;
 	color: #000;
@@ -915,6 +964,16 @@ h4 {
 	border-radius: 3px;
 	height: 40px;
 	width: 150px;
+}
+
+.filter .btn:hover {
+	background-color: #e5e5e5;
+}
+
+.filter .btn:active {
+	background-color: #d5d5d5;
+	border-top: 2px solid #b5b5b5;
+	padding-top: 8px;
 }
 
 /************************************ Блок с товарами */
@@ -954,33 +1013,34 @@ h4 {
 	border: none;
 }
 
+.sort li:last-child {
+	font-size: 0px;
+	line-height: 22px;
+	padding-left: 30px;
+	padding-right: 0px;
+}
+
 .sort-indicator a {
 	border: none;
 	font-size: 23px;
 	line-height: 22px;
 }
 
-.sort li:last-child {
-	font-size: 0px;
-	line-height: 22px;
-	padding-left: 42px;
-	padding-right: 0px;
+.sort-indicator a:hover {
+	border: none;
+	color: #b5b5b5;
 }
 
-.sort-indicator .icon-down-dir:before {
-	margin: -5px;
+.sort-indicator a:active {
+	color: #000;
 }
 
+.sort-indicator .icon-down-dir:before,
 .sort-indicator .icon-up-dir:before {
 	margin: -5px;
 }
 
-.sort-indicator a:hover {
-	border: none;
-	color: black;
-}
-
-.sort-indicator a:active {
+.sort-indicator .active {
 	color: #00ca74;
 }
 
@@ -991,7 +1051,7 @@ h4 {
 	width: 240px;
 	min-height: 270px;
 	margin-left: 10px;
-	margin-right: 66px;
+	margin-right: 65px;
 	margin-bottom: 80px;
 }
 
@@ -999,7 +1059,7 @@ h4 {
 	margin-right: 0;
 }
 
-.sketch {
+.sketch img {
 	width: 240px;
 	height: 240px;
 }
@@ -1007,6 +1067,7 @@ h4 {
 .browse {
 	height: 30px;
 	padding-left: 12px;
+	padding-top: 5px;
 	background-color: #f1f1f1;
 	border-radius: 3px 3px 0 0;
 }
@@ -1039,7 +1100,7 @@ h4 {
 
 .product-info {
 	position: absolute;	
-	height: 200px;
+	min-height: 200px;
 	width: 200px;
 	background-color: white;
 	top: 50%;
@@ -1056,22 +1117,37 @@ h4 {
 	font-size: 18px;
 	line-height: 9px;
 	font-weight: 500;
+	padding-top: 20px;
 	text-transform: uppercase;
+}
+
+.product-description {
+	padding: 0 15px;
 }
 
 .product-name.modern {
 	line-height: 24px;
+	padding-top: 0;
 }
 
+.product-name.modern + p {
+	margin-top: -10px;
+}
 
 .product-info .btn {
+	position: absolute;
 	width: 140px;
 	margin: 0 auto;
 	font-size: 18px;
 	line-height: 9px;
 	padding: 15px 0;
+	bottom: 30px;
+	left: 30px;
 }
 
+.product-info .btn:active {
+	padding-top: 13px;
+}
 
 /************************************ Навигация по страничкам каталога */
 .page-nubmer {
@@ -1095,13 +1171,14 @@ h4 {
 .page-nubmer .btn:active {
 	background-color: #d5d5d5;
 	border-top: 2px solid #b5b5b5;
+	padding-top: 8px;
 }
 
 .active-page {
 	width: 20px;
 	padding: 8px 7px;
 	border-radius: 2px;
-	border: 2px solid #f1f1f1;	
+	border: 2px solid #f1f1f1;
 	font-size: 12px;
 	line-height: 18px;
 	text-align: center;	
@@ -1113,22 +1190,137 @@ h4 {
 	width: 130px;
 }
 
+/************************************ Форма обратной связи */
+.modal-content {
+	display: none;
+}
 
+.modal-content-show {
+	display: block;
+	min-height: 450px;
+	z-index: 300;
+}
 
+.modal-content-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 41px;
+	height: 41px;
+	cursor: pointer;
+	background-color: #fb565a;
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-radius: 50%;
+	color: white;
+	font-size: 50px;
+}
 
+.message {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 460px;
+	min-height: 230px;
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 50px 90px 50px 80px;
+	box-shadow: 0 20px 50px 5px rgba(0,0,0,.7);
+	z-index: 200;
+	margin-left: -300px;
+	margin-top: -200px;
+}
 
+.message .colomn-left {
+	width: 220px;
+}
 
+.message .colomn-right {
+	width: 220px;
+}
 
+.message input[type="text"],
+.message input[type="email"] {
+	width: 188px;
+	margin-top: 10px;
+	margin-bottom: 14px;
+	padding: 5px 18px 5px 10px;
+	font-family: "Roboto","Arial", sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #000;
+	border: 2px solid #d7dcde;
+	border-radius: 5px;
+}
 
+.message input:hover {
+	border-color: #a2a9ac;
+}
 
+.message input:focus {
+	border-color: #56bffb;
+}
 
+.message textarea {
+	width: 442px;
+	height: 90px;
+	margin-top: 10px;
+	margin-bottom: 9px;
+	padding: 10px 14px;
+	padding-right: 0;
+	font-family: "Roboto","Arial", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #000;
+	border: 2px solid #d7dcde;
+	border-radius: 5px;
+	outline: none;
+	resize: none;
+}
 
+.message textarea:hover {
+	border-color: #a2a9ac;
+}
 
+.message textarea:focus {
+	border-color: #56bffb;
+}
 
+.letter-btn button {
+	border: none;
+}
 
+.letter-btn button[type="reset"] {
+	margin-left: 26px;
+	background: #f1f1f1;
+	color: #000;
+}
 
+.letter-btn button[type="reset"]:hover {
+	background: #e5e5e5;
+}
 
+.letter-btn button[type="reset"]:active {
+	background: #d5d5d5;
+	border-top: 2px solid #b5b5b5;
+}
 
+/************************************ Анимация */
+@-webkit-keyframes view {
+	from	{opacity: 0;}
+	to		{ opacity: 1; }
+}
+@keyframes view {
+	from	{opacity: 0;}
+	to		{ opacity: 1; }
+}
 
-
-
+.modal-content {
+	-webkit-animation-name: view;
+			animation-name: view;
+	-webkit-animation-duration: 0.8s;
+			animation-duration: 0.8s;
+}

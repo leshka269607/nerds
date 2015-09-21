@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Nerd's Письмо</title>
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
+	</head>
+	
+	<body>
+
+		<header class="main-header">
+			<div class="layout-center">
+				<div class="header-top clearfix">
+					<div class="logo">
+						<a href="index.html"><img src="img/logo.png" width="139" height="56" alt= "Логотип Nerd's"></a>
+					</div>
+
+					<nav class="main-navigation">
+						<ul class="horizon-list">
+							<li><a href="#">Студия</a></li>
+							<li><a href="#">Клиенты</a></li>
+							<li><a href="catalog.html">Магазин</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</nav>
+
+					<div class="basket">
+						<a href="#">Корзина</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main-content layout-center">
+			<div class="modal-content-show">
+				<div class="message">
+
+					<form action="#" method="post">
+						<div class="colomn-left">
+							<label>
+								Ваше имя:<br>
+								<input type="text" name="username" placeholder="Представьтесь, пожалуйста" required autofocus>
+							</label>
+						</div>
+
+						<div class="colomn-right">
+							<label>
+								Ваш e-mail:<br>
+								<input type="email" name="email" placeholder="Для отправки ответа" required>
+							</label>
+						</div>
+
+						<div class="letter-text">
+							<label>Текст письма:
+								<textarea name="text-letter" required></textarea>
+							</label>
+						</div>
+
+						<div class="letter-btn">
+							<div class="colomn-left">
+								<button type="submit" class="btn">ОТПРАВИТЬ</button>
+							</div>
+
+							<div class="colomn-right">
+								<button type="reset" class="btn">ОТМЕНА</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<footer class="main-footer">
+			<div class="layout-center clearfix">
+				<div class="discount">
+					<div class="footer-social colomn-left">
+						<a href="#" class="social-btn social-btn-vk"></a>
+						<a href="#" class="social-btn social-btn-fb"></a>
+						<a href="#" class="social-btn social-btn-inst"></a>
+						<!--<a href="#" class="social-btn ?">?</a>-->
+					</div>
+
+					<section class="ads colomn-right">
+						<h3>Давайте дружить, это выгодно!</h3>
+						<p>Скидка 10% для друзей из социальных сетей.</p>
+					</section>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+	
+</html>
