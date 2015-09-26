@@ -299,6 +299,10 @@ h4 {
 	min-height: 225px;
 }
 
+.slogan h1 {
+	padding-right: 25px;
+}
+
 .slogan p {
 	font-weight: 500;
 	color: #283136;
@@ -503,6 +507,7 @@ h4 {
 .description .logo {
 	margin-top: 26px;
 	margin-right: 23px;
+  width: 250px;
 }
 
 .logo-description p {
@@ -568,8 +573,8 @@ h4 {
 
 .logos a {
 	display: inline-block;
-	margin-right: 115px;
 	vertical-align: middle;
+	margin-right: 115px;
 	opacity: 0.2;
 }
 .logos a:nth-child(3) {
@@ -614,7 +619,7 @@ h4 {
 	background-color: white;
 	padding: 24px 0 0 20px;
 	margin: 0;
-	z-index: 100;
+	z-index: 5;
 }
 
 .footer-contacts h5 {
@@ -654,7 +659,7 @@ h4 {
 	min-height: 190px;
 	background-image: url("../img/pointer.png");
 	background-repeat: no-repeat;
-	z-index: 1;
+	z-index: 3;
 }
 
 .pointer img {
@@ -804,6 +809,7 @@ h4 {
 .price-controls label {
 	font-size: 16px;
 	display: inline-block;
+	vertical-align: middle;
 	width: 50%;
 }
 
@@ -1151,8 +1157,9 @@ h4 {
 
 /************************************ Навигация по страничкам каталога */
 .page-nubmer {
-	margin-bottom: 84px;
+	margin-bottom: 80px;
 	margin-left: 10px;
+	margin-top: -35px;
 }
 
 .page-nubmer .btn {
@@ -1192,13 +1199,14 @@ h4 {
 
 /************************************ Форма обратной связи */
 .modal-content {
+	position: relative;
+	z-index: 6;
 	display: none;
 }
 
 .modal-content-show {
 	display: block;
 	min-height: 450px;
-	z-index: 300;
 }
 
 .modal-content-close {
@@ -1227,7 +1235,6 @@ h4 {
 	margin: 0 auto;
 	padding: 50px 90px 50px 80px;
 	box-shadow: 0 20px 50px 5px rgba(0,0,0,.7);
-	z-index: 200;
 	margin-left: -300px;
 	margin-top: -200px;
 }
@@ -1310,17 +1317,17 @@ h4 {
 
 /************************************ Анимация */
 @-webkit-keyframes view {
-	from	{opacity: 0;}
-	to		{ opacity: 1; }
+	0% { opacity: 0; }
+	100% { opacity: 1; }
 }
 @keyframes view {
-	from	{opacity: 0;}
-	to		{ opacity: 1; }
+	0% { opacity: 0; }
+	100% { opacity: 1; }
 }
 
-.modal-content {
+.modal-content-show {
 	-webkit-animation-name: view;
 			animation-name: view;
-	-webkit-animation-duration: 0.8s;
-			animation-duration: 0.8s;
+	-webkit-animation-duration: 1s;
+			animation-duration: 1s;
 }

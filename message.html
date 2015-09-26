@@ -9,6 +9,8 @@
 
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.min.css" rel="stylesheet">
+
+		<!-- <link href="css/style.css" rel="stylesheet"> -->
 	</head>
 	
 	<body>
@@ -36,42 +38,35 @@
 			</div>
 		</header>
 
-		<div class="main-content layout-center">
-			<div class="modal-content-show">
-				<div class="message">
+		<div class="modal-content-show layout-center">
+			<div class="message">
+			
+				<form action="#" method="post">
+					<div class="colomn-left">
+						<label for="letter-name">Ваше имя:</label>
+						<input type="text" name="username" id="letter-name" placeholder="Представьтесь, пожалуйста" required autofocus>
+					</div>
 
-					<form action="#" method="post">
+					<div class="colomn-right">
+						<label for="letter-email">Ваш e-mail:</label>
+						<input type="email" name="email" id="letter-email" placeholder="Для отправки ответа" required>
+					</div>
+
+					<div class="letter-text">
+						<label for="letter-text">Текст письма:</label>
+							<textarea name="text-letter" id="letter-text" required></textarea>
+					</div>
+
+					<div class="letter-btn">
 						<div class="colomn-left">
-							<label>
-								Ваше имя:<br>
-								<input type="text" name="username" placeholder="Представьтесь, пожалуйста" required autofocus>
-							</label>
+							<button type="submit" class="btn">ОТПРАВИТЬ</button>
 						</div>
 
 						<div class="colomn-right">
-							<label>
-								Ваш e-mail:<br>
-								<input type="email" name="email" placeholder="Для отправки ответа" required>
-							</label>
+							<button type="reset" class="btn">ОТМЕНА</button>
 						</div>
-
-						<div class="letter-text">
-							<label>Текст письма:
-								<textarea name="text-letter" required></textarea>
-							</label>
-						</div>
-
-						<div class="letter-btn">
-							<div class="colomn-left">
-								<button type="submit" class="btn">ОТПРАВИТЬ</button>
-							</div>
-
-							<div class="colomn-right">
-								<button type="reset" class="btn">ОТМЕНА</button>
-							</div>
-						</div>
-					</form>
-				</div>
+					</div>
+				</form>
 			</div>
 		</div>
 

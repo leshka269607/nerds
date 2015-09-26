@@ -9,6 +9,8 @@
 
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.min.css" rel="stylesheet">
+
+		<!-- <link href="css/style.css" rel="stylesheet"> -->
 	</head>
 
 	<body>
@@ -34,7 +36,7 @@
 					</div>
 				</div>
 
-				<h1 class="welcom">Добро пожаловать в магазин<br>готовых макетов</h1>
+				<h1 class="welcom">Добро пожаловать в магазин готовых&nbsp;макетов</h1>
 			</div>
 		</header>
 
@@ -44,7 +46,7 @@
 
 				<form class="filter" action="#" method="get">
 					<div class="range-filter">
-						<p>СТОИМОСТЬ:</p>
+						<h2>СТОИМОСТЬ:</h2>
 
 						<div class="range-controls">
 							<div class="scale">
@@ -62,7 +64,7 @@
 					</div>
 
 					<div class="grid">
-						<p>Сетка:</p>
+						<h2>СЕТКА:</h2>
 						
 						<ul>
 							<li>
@@ -83,7 +85,7 @@
 					</div>
 
 					<div class="features">
-						<p>Особенности:</p>
+						<h2>ОСОБЕННОСТИ:</h2>
 						
 						<ul>
 							<li>
@@ -132,7 +134,7 @@
 					</ul>
 				</div>
 
-				<div>
+				<div class="goods">
 					<article class="shop">
 						<div class="browse">
 							<ul class="horizon-list">
@@ -287,29 +289,24 @@
 			</div>
 		</footer>
 
-		<div class="modal-content">
+		<div class="modal-content layout-center">
 			<div class="message">
 				<button class="modal-content-close">&times;</button>
 
 				<form action="#" method="post">
 					<div class="colomn-left">
-						<label>
-							Ваше имя:<br>
-							<input type="text" name="username" placeholder="Представьтесь, пожалуйста" required autofocus>
-						</label>
+						<label for="letter-name">Ваше имя:</label>
+						<input type="text" name="username" id="letter-name" placeholder="Представьтесь, пожалуйста" required autofocus>
 					</div>
 
 					<div class="colomn-right">
-						<label>
-							Ваш e-mail:<br>
-							<input type="email" name="email" placeholder="Для отправки ответа" required>
-						</label>
+						<label for="letter-email">Ваш e-mail:</label>
+						<input type="email" name="email" id="letter-email" placeholder="Для отправки ответа" required>
 					</div>
 
 					<div class="letter-text">
-						<label>Текст письма:
-							<textarea name="text-letter" required></textarea>
-						</label>
+						<label for="letter-text">Текст письма:</label>
+							<textarea name="text-letter" id="letter-text" required></textarea>
 					</div>
 
 					<div class="letter-btn">
@@ -327,7 +324,8 @@
 
 	<script src="js/script.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=suEwkZVKJh1C6X3H68CZEstB0JMZQDj2&height=416&id=map-yandex"></script>
-	
+
+	<!-- <script src="js/script.js"></script> -->
 	</body>
 
 </html>

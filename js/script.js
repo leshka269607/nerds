@@ -1,7 +1,7 @@
-	var link 	= document.querySelector(".message_btn");
-	var popup 	= document.querySelector(".modal-content");
+	var link	= document.querySelector(".message_btn");
+	var popup	= document.querySelector(".modal-content");
 	var close	= document.querySelector(".modal-content-close");
-	var login	= popup.querySelector("[name=username]");	
+	var login	= popup.querySelector("[name=username]");
 
 	link.addEventListener("click", function(event) {
 		event.preventDefault();
@@ -12,11 +12,6 @@
 	close.addEventListener("click", function(event) {
 		event.preventDefault();
 		popup.classList.remove("modal-content-show");
-	});
-	
-	link.addEventListener("submin", function(event) {
-		event.preventDefault();
-		
 	});
 
 	window.addEventListener("keydown", function(event) {
